@@ -418,7 +418,7 @@ class MirrorMazeSolver:
                             # print(self.monster_position)
                             self.solutions.append(self.monster_position)
                             # print(self.solutions)
-                            self.write_answer_puzzle_to_file("./answer.txt")
+                            # self.write_answer_puzzle_to_file("./answer.txt")
                         self.backtrack()
                 else:
                     self.backtrack()
