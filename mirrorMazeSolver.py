@@ -476,6 +476,7 @@ def generate_puzzle(height: int, width: int):
         ms_gen = MirrorMazeSolver(monster_nums, grid, None, final_grid)
         ms_gen.find_solutions(True)
         if len(ms_gen.solutions) == 1:
+
             for value in ms_gen.monster_position_determined.values():
                 # return the monsters in the monster_position_determined to the total numbers
                 ms_gen.monster_nums[value] += 1
@@ -485,7 +486,7 @@ def generate_puzzle(height: int, width: int):
         'monster_nums': ms_gen.monster_nums,
         'border_nums': ms_gen.border_nums,
         'grid': ms_gen.grid.tolist(),  # Convert np.array to list for JSON serialization
-        'solution': ms_gen.solutions  # Make sure this is in a format that can be JSON serialized
+        'solution': ms_gen.final_grid.tolist()  # Make sure this is in a format that can be JSON serialized
     }
 
 
