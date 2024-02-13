@@ -4,6 +4,7 @@ from urllib.parse import urlparse, parse_qs
 from mirrorMazeSolver import generate_puzzle
 import json
 
+
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         query_components = parse_qs(urlparse(self.path).query)
