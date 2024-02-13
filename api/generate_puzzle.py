@@ -8,7 +8,7 @@ import json
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         # List of allowed origins
-        allowed_origins = ['https://portfolio-eric-lin.vercel.app', 'http://localhost:3000']
+        allowed_origins = ['https://portfolio-eric-lin.vercel.app', 'https://portfolio-eric-lin-git-dev-games-chuan-che-lins-projects.vercel.app', 'http://localhost:3000']
 
         # Get the origin of the incoming request
         origin = self.headers.get('Origin')
